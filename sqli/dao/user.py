@@ -39,4 +39,5 @@ class User(NamedTuple):
 
     def check_password(self, password: str):
         # return self.pwd_hash == md5(password.encode('utf-8')).hexdigest()
+        ph = PasswordHasher()
         return ph.verify(self.pwd_hash, password.encode('utf-8'))
