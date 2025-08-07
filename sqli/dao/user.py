@@ -2,7 +2,7 @@ from hashlib import md5
 from typing import NamedTuple, Optional
 
 from aiopg import Connection
-
+from argon2 import PasswordHasher
 
 class User(NamedTuple):
     id: int
